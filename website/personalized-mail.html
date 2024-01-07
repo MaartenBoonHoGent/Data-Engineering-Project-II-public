@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gepersonaliseerde Mail</title>
+  <link rel="icon" href="./images/logo_color.png" type="image/png">
+  <link rel="stylesheet" href="css/personalized-mail.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html"><img src="./images/logo_white.png"></a></li>
+        <li><a href="add-data.html">Data Toevoegen</a></li>
+        <li><a href="future-campaigns.html">Toekomstige Campagnes</a></li>
+        <li><a href="lookalikes.html">Lookalikes</a></li>
+        <li><a href="future-contacts.html">Toekomstige Contacten</a></li>
+        <!-- <li><a href="public-data.html">Publieke Data</a></li> -->
+        <li><a href="personalized-mail.html">Gepersonaliseerde Mail</a></li>
+        <!-- <li><a href="membership.html">Lidmaatschap</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="epic">
+      <h1>Genereer een hypergepersonaliseerde mail voor een contact</h1>
+      <p>
+        Geef hieronder een contact (ID) mee om gepersonaliseerde mail te genereren. <br>
+        Ook moet er een lijst van campagnes (ID's) meegegeven worden.
+      </p>
+    </div>
+
+    <div class="input_container">
+      <form action="" method="post">
+        <label for="contact_id">Contact ID<span style="color: red;">*</span></label> <br>
+        <input type="text" id="contact_id" name="contact_id" placeholder="Contact ID" required style="width: 400px;"> <br><br>
+
+        <label for="campaign_id">Campagne ID's<span style="color: red;">*</span></label> <br>
+        <input type="text" id="campaign_id" name="campaign_id" placeholder="Campagne ID's" required style="width: 400px;"> <br><br>
+
+        <input type="submit" value="Stel mail op">
+      </form>
+
+      <!-- create a button that copies the text from the first td of the tbody -->
+      <button id="copyMail" onclick="copyToClipboard()">Kopieer mail</button>
+
+      <div class="table_container">
+        <table>
+          <thead>
+            <tr>
+              <!-- zijn deze alle 3 nodig om op te nemen in de frontend of is Mail alleen voldoende? -->
+              <th>Onderwerp</th>
+              <th>Mail</th>
+              <th>Kost</th>
+              <th>Provider</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>personalized-mail</td>
+              <td>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates nulla nam illum? At voluptatem facere similique, iste ratione, nisi illo ipsam, blanditiis suscipit repellendus nulla quibusdam tempore. Qui, eligendi. 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aperiam alias distinctio esse, at, nisi molestiae voluptatibus tempora labore ullam reprehenderit natus. Voluptate cumque expedita, sequi accusamus atque eligendi natus?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad in ab temporibus, deserunt, distinctio id ducimus est quos debitis ipsa officiis corrupti explicabo quaerat modi deleniti asperiores provident quisquam pariatur?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nesciunt officiis harum alias, est itaque eum ducimus voluptate error quisquam deserunt beatae eos ipsum nemo quod? Excepturi, id temporibus. Sed!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit minima nihil quaerat est quis, commodi reiciendis perspiciatis perferendis id cumque dicta expedita assumenda. Saepe neque voluptatem quidem veniam voluptatibus suscipit!
+              </td>
+              <td>€ 0,07</td>
+              <td>OpenAI</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script>
+    function copyToClipboard() {
+      // get the first td of the tbody
+      let mail = document.querySelector("tbody tr td:first-child");
+
+      // copy the text from the td
+      navigator.clipboard.writeText(mail.innerText);
+    }
+  </script>
+</body>
+</html>

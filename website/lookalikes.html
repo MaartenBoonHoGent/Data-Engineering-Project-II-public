@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lookalikes</title>
+  <link rel="icon" href="./images/logo_color.png" type="image/png">
+  <link rel="stylesheet" href="css/lookalikes.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html"><img src="./images/logo_white.png"></a></li>
+        <li><a href="add-data.html">Data Toevoegen</a></li>
+        <li><a href="future-campaigns.html">Toekomstige Campagnes</a></li>
+        <li><a href="lookalikes.html">Lookalikes</a></li>
+        <li><a href="future-contacts.html">Toekomstige Contacten</a></li>
+        <!-- <li><a href="public-data.html">Publieke Data</a></li> -->
+        <li><a href="personalized-mail.html">Gepersonaliseerde Mail</a></li>
+        <!-- <li><a href="membership.html">Lidmaatschap</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="epic">
+      <h1>Genereer lookalikes voor een contact</h1>
+      <p>
+        Geef hieronder een contact (ID) mee om lookalikes te genereren. <br>
+        Er is ook de keuze om het aantal lookalikes te bepalen (default = 10).
+      </p>
+    </div>
+
+    <div class="input_container">
+      <form action="" method="post">
+        <label for="contact_id">Contact ID<span style="color: red;">*</span></label> <br>
+        <input type="text" id="contact_id" name="contact_id" placeholder="Contact ID" required style="width: 400px;"> <br><br>
+
+        <label for="amount">Aantal lookalikes</label> <br>
+        <input type="number" id="amount" name="amount" min="1" max="100" value="10"> <br><br>
+
+        <input type="submit" value="Zoek lookalikes" onclick="getAmount()">
+      </form>
+    </div>
+
+    <a href="../src/epic 4/data/top_lookalikes.csv" id="csvdownload" onclick="downloadCSV()">Exporteer als CSV</a>
+
+    <div class="table_container">
+      <table>
+        <thead>
+          <tr>
+            <th>Contact ID</th>
+            <th>Lookalike ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- voorbeelrijden -->
+          <tr>
+            <td rowspan="11">1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>11</td>
+          </tr>
+        </tbody>
+      </table>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script>
+    function downloadCSV() {
+      let contactid = document.getElementById("contact_id").value;
+      let amount = document.getElementById("amount").value;
+      let filename = "top" + amount + "_lookalikes_" + contactid + ".csv";
+
+      document.getElementById("csvdownload").setAttribute("download", filename);
+
+      console.log("downloading csv file ...");
+    }
+
+    function getAmount() {
+      let amount = document.getElementById("amount").value;
+      // let contactid = document.getElementById("contact_id").value;
+      let tr = document.querySelector("tbody tr");
+      let td = tr.querySelector("td");
+      
+      td.setAttribute("rowspan", amount);
+      // td.innerHTML = contactid;
+    }
+  </script>
+</body>
+</html>

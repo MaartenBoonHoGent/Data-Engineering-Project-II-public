@@ -1,0 +1,443 @@
+[
+  {
+    "file_name": "teams.csv",
+    "table_name": "teams",
+    "columns": {
+      "XLS_Teams_Team_code_selecteer_uit_lijst_": "xls_teams_team_code_selecteer_uit_lijst",
+      "XLS_Teams_Activiteit_boeking_naam_ter_info_": "XLS_Teams_Activiteit_boeking_naam_ter_info"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "Afspraak alle.csv",
+    "table_name": "afspraak_alle",
+    "columns": {
+      "crm_Afspraak_ALLE_Afspraak": "crm_afspraak_id"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "Activiteit vereist contact.csv",
+    "table_name": "activiteit_vereist_contact",
+    "columns": {
+      "crm_activiteitvereistcontact_activityid": "crm_afspraak_id",
+      "crm_activiteitvereistcontact_reqattendee": "crm_activiteitvereistcontact_reqattendee"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "Afspraak betreft account_cleaned.csv",
+    "table_name": "afspraak_betreft_account",
+    "columns": {
+      "crm_afspraak_betreft_account_afspraak": "crm_afspraak_id",
+      "crm_afspraak_betreft_account_thema": "crm_afspraak_betreft_account_thema",
+      "crm_afspraak_betreft_account_subthema": "crm_afspraak_betreft_account_subthema",
+      "crm_afspraak_betreft_account_onderwerp": "crm_afspraak_betreft_account_onderwerp",
+      "crm_afspraak_betreft_account_betreft_id": "crm_account_id",
+      "crm_afspraak_betreft_account_eindtijd": "crm_afspraak_betreft_account_eindtijd",
+      "crm_afspraak_betreft_account_keyphrases": "crm_afspraak_betreft_account_keyphrases"
+    },
+    "refactor": {
+      "crm_afspraak_betreft_account_eindtijd": "to_date"
+    }
+  },
+  {
+    "file_name": "Contact.csv",
+    "table_name": "contact",
+    "columns": {
+      "crm_contact_contactpersoon": "crm_contact_id",
+      "crm_contact_account": "crm_contact_account",
+      "crm_contact_functietitel": "crm_contact_functietitel",
+      "crm_contact_persoon_id": "crm_persoon_id",
+      "crm_contact_status": "crm_contact_status",
+      "crm_contact_voka_medewerker": "crm_contact_voka_medewerker"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "Sessie inschrijving.csv",
+    "table_name": "sessie_inschrijving",
+    "columns": {
+      "crm_sessieinschrijving_sessieinschrijving": "crm_sessieinschrijving_sessieinschrijving",
+      "crm_SessieInschrijving_Sessie": "crm_sessie_id",
+      "crm_SessieInschrijving_Inschrijving": "crm_inschrijving_id"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "Inschrijvingen.csv",
+    "table_name": "inschrijving",
+    "columns": {
+      "crm_inschrijving_aanwezig_afwezig": "crm_inschrijving_aanwezig_afwezig",
+      "crm_inschrijving_bron": "crm_inschrijving_bron",
+      "crm_inschrijving_contactfiche": "crm_contact_id",
+      "crm_inschrijving_datum_inschrijving": "crm_inschrijving_datum_inschrijving",
+      "crm_inschrijving_inschrijving": "crm_inschrijving_id",
+      "crm_inschrijving_facturatie_bedrag": "crm_inschrijving_facturatie_bedrag",
+      "crm_Inschrijving_Campagne": "crm_campagne_id",
+      "crm_Inschrijving_Campagne_Naam_": "crm_inschrijving_campagne_naam"
+    },
+    "refactor": {
+      "crm_inschrijving_datum_inschrijving": "to_date",
+      "crm_inschrijving_facturatie_bedrag": "to_float"
+    }
+  },
+  {
+    "file_name": "Sessie.csv",
+    "table_name": "sessie",
+    "columns": {
+      "crm_sessie_activiteitstype": "crm_sessie_activiteitstype",
+      "crm_sessie_campagne": "crm_campagne_id",
+      "crm_sessie_eind_datum_tijd": "crm_sessie_eind_datum_tijd",
+      "crm_sessie_product": "crm_sessie_product",
+      "crm_sessie_sessie": "crm_sessie_id",
+      "crm_sessie_sessie_nr_": "crm_sessie_sessie_nr",
+      "crm_sessie_start_datum_tijd": "crm_sessie_start_datum_tijd",
+      "crm_sessie_thema_naam_": "crm_sessie_thema_naam"
+    },
+    "refactor": {
+      "crm_sessie_eind_datum_tijd": "to_datetime",
+      "crm_sessie_start_datum_tijd": "to_datetime"
+    }
+  },
+  {
+    "file_name": "Campagnes.csv",
+    "table_name": "campagne",
+    "columns": {
+      "crm_Campagne_Campagne": "crm_campagne_id",
+      "crm_Campagne_Campagne_Nr": "crm_campagne_campagne_nr",
+      "crm_Campagne_Einddatum": "crm_campagne_einddatum",
+      "crm_Campagne_Naam": "crm_campagne_naam",
+      "crm_Campagne_Naam_in_email": "crm_campagne_naam_in_email",
+      "crm_Campagne_Reden_van_status": "crm_campagne_reden_van_status",
+      "crm_Campagne_Startdatum": "crm_campagne_startdatum",
+      "crm_Campagne_Status": "crm_campagne_status",
+      "crm_Campagne_Type_campagne": "crm_campagne_type_campagne",
+      "crm_Campagne_URL_voka_be": "crm_campagne_url_voka_be",
+      "crm_Campagne_Soort_Campagne": "crm_campagne_soort_campagne"
+    },
+    "refactor": {
+      "crm_campagne_einddatum": "to_datetime",
+      "crm_campagne_startdatum": "to_datetime"
+    }
+  },
+  {
+    "file_name": "Lidmaatschap.csv",
+    "table_name": "lidmaatschap",
+    "columns": {
+      "crm_lidmaatschap_datum_opzeg": "crm_lidmaatschap_datum_opzeg",
+      "crm_lidmaatschap_lidmaatschap": "crm_lidmaatschap_id",
+      "crm_lidmaatschap_onderneming": "crm_account_id",
+      "crm_lidmaatschap_reden_aangroei": "crm_lidmaatschap_reden_aangroei",
+      "crm_lidmaatschap_reden_verloop": "crm_lidmaatschap_reden_verloop",
+      "crm_lidmaatschap_startdatum": "crm_lidmaatschap_startdatum"
+    },
+    "refactor": {
+      "crm_lidmaatschap_datum_opzeg": "to_date",
+      "crm_lidmaatschap_startdatum": "to_date"
+    }
+  },
+  {
+    "file_name": "Info en klachten.csv",
+    "table_name": "info_en_klachten",
+    "columns": {
+      "crm_info_en_klachten_aanvraag": "crm_info_en_klachten_aanvraag",
+      "crm_info_en_klachten_account": "crm_account_id",
+      "crm_info_en_klachten_datum": "crm_info_en_klachten_datum",
+      "crm_info_en_klachten_datum_afsluiting": "crm_info_en_klachten_datum_afsluiting",
+      "crm_info_en_klachten_status": "crm_info_en_klachten_status",
+      "crm_info_en_klachten_eigenaar": "crm_gebruikers_id"
+    },
+    "refactor": {
+      "crm_info_en_klachten_datum": "to_datetime",
+      "crm_info_en_klachten_datum_afsluiting": "to_datetime"
+    }
+  },
+  {
+    "file_name": "Afspraak_account_gelinkt_cleaned.csv",
+    "table_name": "afspraak_account_gelinkt",
+    "columns": {
+      "crm_afspraak_account_gelinkt_afspraak": "crm_afspraak_id",
+      "crm_afspraak_account_gelinkt_thema": "crm_afspraak_account_gelinkt_thema",
+      "crm_afspraak_account_gelinkt_subthema": "crm_afspraak_account_gelinkt_subthema",
+      "crm_afspraak_account_gelinkt_onderwerp": "crm_afspraak_account_gelinkt_onderwerp",
+      "crm_afspraak_account_gelinkt_eindtijd": "crm_afspraak_account_gelinkt_eindtijd",
+      "crm_afspraak_account_gelinkt_account": "crm_account_id",
+      "crm_afspraak_account_gelinkt_keyphrases": "crm_afspraak_account_gelinkt_keyphrases"
+    },
+    "refactor": {
+      "crm_afspraak_account_gelinkt_eindtijd": "to_date"
+    }
+  },
+  {
+    "file_name": "Afspraak betreft contact_cleaned.csv",
+    "table_name": "afspraak_betreft_contact",
+    "columns": {
+      "crm_afspraak_betreft_contactfiche_betreft_id": "crm_contact_id",
+      "crm_afspraak_betreft_contactfiche_thema": "crm_afspraak_betreft_contactfiche_thema",
+      "crm_afspraak_betreft_contactfiche_subthema": "crm_afspraak_betreft_contactfiche_subthema",
+      "crm_afspraak_betreft_contactfiche_onderwerp": "crm_afspraak_betreft_contactfiche_onderwerp",
+      "crm_afspraak_betreft_contactfiche_afspraak": "crm_afspraak_id",
+      "crm_afspraak_betreft_contactfiche_eindtijd": "crm_afspraak_betreft_contactfiche_eindtijd",
+      "crm_afspraak_betreft_contactfiche_keyphrases": "crm_afspraak_betreft_contactfiche_keyphrases"
+    },
+    "refactor": {
+      "crm_afspraak_betreft_contactfiche_eindtijd": "to_date"
+    }
+  },
+  {
+    "file_name": "CDI mailing.csv",
+    "table_name": "cdi_mailing",
+    "columns": {
+      "crm_cdi_mailing_mailing": "crm_cdi_mailing_id",
+      "crm_cdi_mailing_name": "crm_cdi_mailing_name",
+      "crm_cdi_mailing_sent_on": "crm_cdi_mailing_sent_on",
+      "crm_cdi_mailing_onderwerp": "crm_cdi_mailing_onderwerp"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "cdi pageviews.csv",
+    "table_name": "cdi_pageview",
+    "columns": {
+      "crm cdi_pageview[anonymous visitor]": "anonymous_visitor",
+      "crm cdi_pageview[browser]": "browser",
+      "crm cdi_pageview[campaign]": "campagne_id",
+      "crm cdi_pageview[contact]": "contact_id",
+      "crm cdi_pageview[duration]": "duration",
+      "crm cdi_pageview[operating system]": "operating_system",
+      "crm cdi_pageview[page view]": "pageview_id",
+      "crm cdi_pageview[referrer type]": "referrer_type",
+      "crm cdi_pageview[time]": "time",
+      "crm cdi_pageview[page title]": "page_title",
+      "crm cdi_pageview[type]": "type",
+      "crm cdi_pageview[url]": "url",
+      "crm cdi_pageview[viewed on]": "viewed_on",
+      "crm cdi_pageview[visit]": "visit_id",
+      "crm cdi_pageview[visitor key]": "visitor_key",
+      "crm cdi_pageview[web content]": "web_content",
+      "crm cdi_pageview[aangemaakt op]": "created_on",
+      "crm cdi_pageview[gewijzigd door]": "modified_by",
+      "crm cdi_pageview[gewijzigd op]": "modified_on",
+      "crm cdi_pageview[status]": "status",
+      "crm cdi_pageview[reden van status]": "status_reason"
+    },
+    "refactor": {
+      "time": "to_datetime_utc",
+      "viewed_on": "to_date",
+      "created_on": "to_date",
+      "modified_on": "to_date"
+    },
+    "info": {
+      "encoding": "latin1",
+      "delimiter": ";"
+    }
+  },
+  {
+    "file_name": "CDI sent email clicks.csv",
+    "table_name": "cdi_sentemail_kliks",
+    "columns": {
+      "crm_cdi_sentemail_kliks_clicks": "crm_cdi_sentemail_kliks_clicks",
+      "crm_cdi_sentemail_kliks_contact": "crm_persoon_id",
+      "crm_CDI_SentEmail_kliks_E_mail_versturen": "crm_cdi_mailing_id",
+      "crm_cdi_sentemail_kliks_sent_email": "crm_cdi_sentemail_kliks_sent_email"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "CDI visits.csv",
+    "table_name": "cdi_visit",
+    "columns": {
+      "crm_cdi_visit_adobe_reader": "crm_cdi_visit_adobe_reader",
+      "crm_cdi_visit_bounce": "crm_cdi_visit_bounce",
+      "crm_cdi_visit_browser": "crm_cdi_visit_browser",
+      "crm_cdi_visit_campagne_code": "crm_cdi_visit_campagne_code",
+      "crm_cdi_visit_campaign": "crm_campagne_id",
+      "crm_cdi_visit_ip_stad": "crm_cdi_visit_ip_stad",
+      "crm_cdi_visit_ip_company": "crm_cdi_visit_ip_company",
+      "crm_cdi_visit_contact": "crm_persoon_id",
+      "crm_cdi_visit_contact_naam_": "crm_cdi_visit_contact_naam",
+      "crm_cdi_visit_containssocialprofile": "crm_cdi_visit_containssocialprofile",
+      "crm_cdi_visit_ip_land": "crm_cdi_visit_ip_land",
+      "crm_cdi_visit_duration": "crm_cdi_visit_duration",
+      "crm_cdi_visit_email_send": "crm_cdi_mailing_id",
+      "crm_cdi_visit_ended_on": "crm_cdi_visit_ended_on",
+      "crm_cdi_visit_entry_page": "crm_cdi_visit_entry_page",
+      "crm_cdi_visit_exit_page": "crm_cdi_visit_exit_page",
+      "crm_cdi_visit_first_visit": "crm_cdi_visit_first_visit",
+      "crm_cdi_visit_ip_address": "crm_cdi_visit_ip_address",
+      "crm_cdi_visit_ip_organization": "crm_cdi_visit_ip_organization",
+      "crm_cdi_visit_keywords": "crm_cdi_visit_keywords",
+      "crm_cdi_visit_ip_latitude": "crm_cdi_visit_ip_latitude",
+      "crm_cdi_visit_ip_longitude": "crm_cdi_visit_ip_longitude",
+      "crm_cdi_visit_operating_system": "crm_cdi_visit_operating_system",
+      "crm_cdi_visit_ip_postcode": "crm_cdi_visit_ip_postcode",
+      "crm_cdi_visit_referrer": "crm_cdi_visit_referrer",
+      "crm_cdi_visit_referring_host": "crm_cdi_visit_referring_host",
+      "crm_cdi_visit_score": "crm_cdi_visit_score",
+      "crm_cdi_visit_referrer_type": "crm_cdi_visit_referrer_type",
+      "crm_cdi_visit_started_on": "crm_cdi_visit_started_on",
+      "crm_cdi_visit_ip_status": "crm_cdi_visit_ip_status",
+      "crm_cdi_visit_time": "crm_cdi_visit_time",
+      "crm_cdi_visit_total_pages": "crm_cdi_visit_total_pages",
+      "crm_cdi_visit_visit": "crm_cdi_visit_id",
+      "crm_cdi_visit_aangemaakt_op": "crm_cdi_visit_aangemaakt_op",
+      "crm_cdi_visit_gewijzigd_op": "crm_cdi_visit_gewijzigd_op"
+    },
+    "refactor": {
+      "crm_cdi_visit_started_on": "to_datetime",
+      "crm_cdi_visit_ended_on": "to_datetime",
+      "crm_cdi_visit_time": ["clean_nan", "to_datetime_utc"],
+      "crm_cdi_visit_aangemaakt_op": "to_datetime",
+      "crm_cdi_visit_gewijzigd_op": "to_datetime"
+    }
+  },
+  {
+    "file_name": "Persoon.csv",
+    "table_name": "persoon",
+    "columns": {
+      "crm_persoon_persoon": "crm_persoon_id",
+      "crm_persoon_persoonsnr_": "crm_persoon_persoonsnr",
+      "crm_persoon_reden_van_status": "crm_persoon_reden_van_status",
+      "crm_persoon_web_login": "crm_persoon_web_login",
+      "crm_persoon_mail_regio_antwerpen_waasland": "crm_persoon_mail_regio_antwerpen_waasland",
+      "crm_persoon_mail_regio_brussel_hoofdstedelijk_gewest": "crm_persoon_mail_regio_brussel_hoofdstedelijk_gewest",
+      "crm_persoon_mail_regio_limburg": "crm_persoon_mail_regio_limburg",
+      "crm_persoon_mail_regio_mechelen_kempen": "crm_persoon_mail_regio_mechelen_kempen",
+      "crm_persoon_mail_regio_oost_vlaanderen": "crm_persoon_mail_regio_oost_vlaanderen",
+      "crm_persoon_mail_regio_vlaams_brabant": "crm_persoon_mail_regio_vlaams_brabant",
+      "crm_persoon_mail_regio_voka_nationaal": "crm_persoon_mail_regio_voka_nationaal",
+      "crm_persoon_mail_regio_west_vlaanderen": "crm_persoon_mail_regio_west_vlaanderen",
+      "crm_persoon_mail_thema_duurzaamheid": "crm_persoon_mail_thema_duurzaamheid",
+      "crm_persoon_mail_thema_financieel_fiscaal": "crm_persoon_mail_thema_financieel_fiscaal",
+      "crm_persoon_mail_thema_innovatie": "crm_persoon_mail_thema_innovatie",
+      "crm_persoon_mail_thema_internationaal_ondernemen": "crm_persoon_mail_thema_internationaal_ondernemen",
+      "crm_persoon_mail_thema_mobiliteit": "crm_persoon_mail_thema_mobiliteit",
+      "crm_persoon_mail_thema_omgeving": "crm_persoon_mail_thema_omgeving",
+      "crm_persoon_mail_thema_sales_marketing_communicatie": "crm_persoon_mail_thema_sales_marketing_communicatie",
+      "crm_persoon_mail_thema_strategie_en_algemeen_management": "crm_persoon_mail_thema_strategie_en_algemeen_management",
+      "crm_persoon_mail_thema_talent": "crm_persoon_mail_thema_talent",
+      "crm_persoon_mail_thema_welzijn": "crm_persoon_mail_thema_welzijn",
+      "crm_persoon_mail_type_bevraging": "crm_persoon_mail_type_bevraging",
+      "crm_persoon_mail_type_communities_en_projecten": "crm_persoon_mail_type_communities_en_projecten",
+      "crm_persoon_mail_type_netwerkevenementen": "crm_persoon_mail_type_netwerkevenementen",
+      "crm_persoon_mail_type_nieuwsbrieven": "crm_persoon_mail_type_nieuwsbrieven",
+      "crm_persoon_mail_type_opleidingen": "crm_persoon_mail_type_opleidingen",
+      "crm_persoon_mail_type_persberichten_belangrijke_meldingen": "crm_persoon_mail_type_persberichten_belangrijke_meldingen",
+      "crm_persoon_marketingcommunicatie": "crm_persoon_marketingcommunicatie"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "Account activiteitscode.csv",
+    "table_name": "account_activiteitscode",
+    "columns": {
+      "crm_account_activiteitscode_activiteitscode": "crm_activiteitscode_id",
+      "crm_account_activiteitscode_account": "crm_account_id",
+      "crm_account_activiteitscode_inf_account_inf_activiteitscodeId": "crm_account_activiteitscode_inf_account_inf_activiteitscodeId"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "Contact functie.csv",
+    "table_name": "contactfunctie",
+    "columns": {
+      "crm_contactfunctie_contactpersoon": "crm_contact_id",
+      "crm_contactfunctie_functie": "crm_functie_id"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "Activiteitscode.csv",
+    "table_name": "activiteitscode",
+    "columns": {
+      "crm_activiteitscode_naam": "crm_activiteitscode_naam",
+      "crm_activiteitscode_activiteitscode": "crm_activiteitscode_id",
+      "crm_activiteitscode_status": "crm_activiteitscode_status"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "Functie.csv",
+    "table_name": "functie",
+    "columns": {
+      "crm_functie_functie": "crm_functie_id",
+      "crm_functie_naam": "crm_functie_naam"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "Account financiële data.csv",
+    "table_name": "financiele_data",
+    "columns": {
+      "crm_financieledata_ondernemingid": "crm_account_id",
+      "crm_financieledata_boekjaar": "crm_financieledata_boekjaar",
+      "crm_financieledata_aantal_maanden": "crm_financieledata_aantal_maanden",
+      "crm_financieledata_toegevoegde_waarde": "crm_financieledata_toegevoegde_waarde",
+      "crm_financieledata_fte": "crm_financieledata_fte",
+      "crm_financieledata_gewijzigd_op": "crm_financieledata_gewijzigd_op"
+    },
+    "refactor": {
+      "crm_financieledata_gewijzigd_op": "to_datetime",
+      "crm_financieledata_toegevoegde_waarde": "to_float",
+      "crm_financieledata_fte": "to_float"
+    }
+  },
+  {
+    "file_name": "Gebruikers.csv",
+    "table_name": "gebruikers",
+    "columns": {
+      "crm_gebruikers_crm_user_id": "crm_gebruikers_id",
+      "crm_gebruikers_business_unit_naam_": "crm_gebruikers_business_unit_naam"
+    },
+    "refactor": {}
+  },
+  {
+    "file_name": "Account.csv",
+    "table_name": "account",
+    "columns": {
+      "crm_Account_Account": "crm_account_id",
+      "crm_account_adres_geografische_regio": "crm_account_adres_geografische_regio",
+      "crm_account_adres_geografische_subregio": "crm_account_adres_geografische_subregio",
+      "crm_account_adres_plaats": "crm_account_adres_plaats",
+      "crm_account_adres_postcode": "crm_account_adres_postcode",
+      "crm_account_adres_provincie": "crm_account_adres_provincie",
+      "crm_Account_Adres_Land": "crm_account_adres_land",
+      "crm_Account_Industriezone_Naam_": "crm_account_industriezone_naam",
+      "crm_account_is_voka_entiteit": "crm_account_is_voka_entiteit",
+      "crm_account_ondernemingsaard": "crm_account_ondernemingsaard",
+      "crm_account_ondernemingstype": "crm_account_ondernemingstype",
+      "crm_account_oprichtingsdatum": "crm_account_oprichtingsdatum",
+      "crm_account_primaire_activiteit": "crm_account_primaire_activiteit",
+      "crm_account_reden_van_status": "crm_account_reden_van_status",
+      "crm_account_status": "crm_account_status",
+      "crm_Account_Voka_Nr_": "crm_account_voka_nr",
+      "crm_account_hoofd_nace_code": "crm_account_hoofd_nace_code",
+      "crm_account": "crm_account"
+    },
+    "refactor": {
+      "crm_account_oprichtingsdatum": "to_date"
+    }
+  },
+  {
+    "file_name": "CDI web content.csv",
+    "table_name": "cdi_web_content",
+    "columns": {
+      "crm_cdi_webcontent_campaign": "crm_cdi_webcontent_campaign",
+      "crm_cdi_webcontent_campaign_name": "crm_cdi_webcontent_campaign_name",
+      "crm_cdi_webcontent_name": "crm_cdi_webcontent_name",
+      "crm_cdi_webcontent_web_content": "crm_cdi_webcontent_web_content",
+      "crm_cdi_webcontent_gemaakt_door_naam_": "crm_cdi_webcontent_gemaakt_door_naam",
+      "crm_cdi_webcontent_created_on": "crm_cdi_webcontent_created_on",
+      "crm_cdi_webcontent_gewijzigd_door_naam_": "crm_cdi_webcontent_gewijzigd_door_naam",
+      "crm_cdi_webcontent_modified_on": "crm_cdi_webcontent_modified_on",
+      "crm_cdi_webcontent_owner": "crm_cdi_webcontent_owner",
+      "crm_cdi_webcontent_owner_name": "crm_cdi_webcontent_owner_name",
+      "crm_cdi_webcontent_het_bezitten_van_business_unit": "crm_cdi_webcontent_het_bezitten_van_business_unit"
+    },
+    "refactor": {
+      "crm_cdi_webcontent_created_on": "to_datetime",
+      "crm_cdi_webcontent_modified_on": "to_datetime"
+    }
+  }
+]

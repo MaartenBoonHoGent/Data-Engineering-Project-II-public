@@ -1,0 +1,10 @@
+.env
+/venv
+/.idea
+/data/contacts.csv
+/*.csv
+/src/epic 3/data/*.csv
+/temp
+/archive
+*.csv
+*.pkl

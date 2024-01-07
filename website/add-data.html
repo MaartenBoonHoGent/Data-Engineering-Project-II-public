@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Toevoegen</title>
+  <link rel="icon" href="./images/logo_color.png" type="image/png">
+  <link rel="stylesheet" href="css/add-data.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html"><img src="./images/logo_white.png"></a></li>
+        <li><a href="add-data.html">Data Toevoegen</a></li>
+        <li><a href="future-campaigns.html">Toekomstige Campagnes</a></li>
+        <li><a href="lookalikes.html">Lookalikes</a></li>
+        <li><a href="future-contacts.html">Toekomstige Contacten</a></li>
+        <!-- <li><a href="public-data.html">Publieke Data</a></li> -->
+        <li><a href="personalized-mail.html">Gepersonaliseerde Mail</a></li>
+        <!-- <li><a href="membership.html">Lidmaatschap</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="epic">
+      <h1>Voeg nieuwe data toe</h1>
+      <p>
+        Upload hier de aanvullende CSV-file om nieuwe data toe te voegen. <br>
+        Selecteer ook voor welke bestemming deze CSV bestemd is.
+      </p>
+
+      <div class="input_container">
+        <label for="files" id="inputfile">Upload CSV</label>
+        <input id="files" style="display:none;" type="file" accept=".csv">
+      </div>
+    </div>
+
+    <aside>
+      <div class="tablenames">
+        <!-- create radiobuttons -->
+        <div class="radiobuttons">
+          <input type="radio" id="account" name="table" value="account">
+          <label for="account">account</label><br>
+
+          <input type="radio" id="account_activiteitscode" name="table" value="account_activiteitscode">
+          <label for="account_activiteitscode">account_activiteitscode</label><br>
+
+          <input type="radio" id="activiteit_vereist_contact" name="table" value="activiteit_vereist_contact">
+          <label for="activiteit_vereist_contact">activiteit_vereist_contact</label><br>
+
+          <input type="radio" id="activiteitscode" name="table" value="activiteitscode">
+          <label for="activiteitscode">activiteitscode</label><br>
+
+          <input type="radio" id="afspraak_account_gelinkt" name="table" value="afspraak_account_gelinkt">
+          <label for="afspraak_account_gelinkt">afspraak_account_gelinkt</label><br>
+
+          <input type="radio" id="afspraak_alle" name="table" value="afspraak_alle">
+          <label for="afspraak_alle">afspraak_alle</label><br>
+
+          <input type="radio" id="afspraak_betreft_account" name="table" value="afspraak_betreft_account">
+          <label for="afspraak_betreft_account">afspraak_betreft_account</label><br>
+          
+          <input type="radio" id="afspraak_betreft_contact" name="table" value="afspraak_betreft_contact">
+          <label for="afspraak_betreft_contact">afspraak_betreft_contact</label><br>
+
+          <input type="radio" id="campagne" name="table" value="campagne">
+          <label for="campagne">campagne</label><br>
+
+          <input type="radio" id="cdi_mailing" name="table" value="cdi_mailing">
+          <label for="cdi_mailing">cdi_mailing</label><br>
+
+          <input type="radio" id="cdi_pageview" name="table" value="cdi_pageview">
+          <label for="cdi_pageview">cdi_pageview</label><br>
+
+          <input type="radio" id="activiteitscode" name="table" value="activiteitscode">
+          <label for="activiteitscode">cdi_sentemail_kliks</label><br>
+
+          <input type="radio" id="cdi_visit" name="table" value="cdi_visit">
+          <label for="cdi_visit">cdi_visit</label><br>
+
+          <input type="radio" id="cdi_webcontent" name="table" value="cdi_webcontent">
+          <label for="cdi_webcontent">cdi_webcontent</label><br>
+
+          <input type="radio" id="contact" name="table" value="contact">
+          <label for="contact">contact</label><br>
+          
+          <input type="radio" id="contactfunctie" name="table" value="contactfunctie">
+          <label for="contactfunctie">contactfunctie</label><br>
+
+          <input type="radio" id="financiele_data" name="table" value="financiele_data">
+          <label for="financiele_data">financiele_data</label><br>
+
+          <input type="radio" id="functie" name="table" value="functie">
+          <label for="functie">functie</label><br>
+
+          <input type="radio" id="gebruikers" name="table" value="gebruikers">
+          <label for="gebruikers">gebruikers</label><br>
+
+          <input type="radio" id="info_en_klachten" name="table" value="info_en_klachten">
+          <label for="info_en_klachten">info_en_klachten</label><br>
+
+          <input type="radio" id="inschrijving" name="table" value="inschrijving">
+          <label for="inschrijving">inschrijving</label><br>
+
+          <input type="radio" id="lidmaatschap" name="table" value="lidmaatschap">
+          <label for="lidmaatschap">lidmaatschap</label><br>
+
+          <input type="radio" id="persoon" name="table" value="persoon">
+          <label for="persoon">persoon</label><br>
+          
+          <input type="radio" id="sessie" name="table" value="sessie">
+          <label for="sessie">sessie</label><br>
+
+          <input type="radio" id="sessie_inschrijving" name="table" value="sessie_inschrijving">
+          <label for="sessie_inschrijving">sessie_inschrijving</label><br>
+      </div>
+    </aside>
+    
+  </main>
+
+  <footer>
+
+  </footer>
+</body>
+</html>

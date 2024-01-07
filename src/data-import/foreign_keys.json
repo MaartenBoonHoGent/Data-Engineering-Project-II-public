@@ -1,0 +1,200 @@
+[
+  {
+    "table": "account",
+    "primary_key": "crm_account_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "crm_account_id",
+        "table": "account_activiteitscode"
+      },
+      {
+        "foreign_key": "crm_account_id",
+        "table": "afspraak_account_gelinkt"
+      },
+      {
+        "foreign_key": "crm_account_id",
+        "table": "afspraak_betreft_account"
+      },
+      {
+        "foreign_key": "crm_contact_account",
+        "table": "contact"
+      },
+      {
+        "foreign_key": "crm_account_id",
+        "table": "financiele_data"
+      },
+      {
+        "foreign_key": "crm_account_id",
+        "table": "info_en_klachten"
+      },
+      {
+        "foreign_key": "crm_account_id",
+        "table": "lidmaatschap"
+      }
+    ]
+  },
+  {
+    "table": "activiteitscode",
+    "primary_key": "crm_activiteitscode_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "crm_activiteitscode_id",
+        "table": "account_activiteitscode"
+      }
+    ]
+  },
+  {
+    "table": "contact",
+    "primary_key": "crm_contact_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "crm_activiteitvereistcontact_reqattendee",
+        "table": "activiteit_vereist_contact"
+      },
+      {
+        "foreign_key": "crm_contact_id",
+        "table": "afspraak_betreft_contact"
+      },
+      {
+        "foreign_key": "crm_contact_id",
+        "table": "contactfunctie"
+      },
+      {
+        "foreign_key": "crm_contact_id",
+        "table": "inschrijving"
+      }
+    ]
+  },
+  {
+    "table": "afspraak_alle",
+    "primary_key": "crm_afspraak_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "crm_afspraak_id",
+        "table": "activiteit_vereist_contact"
+      },
+      {
+        "foreign_key": "crm_afspraak_id",
+        "table": "afspraak_account_gelinkt"
+      },
+      {
+        "foreign_key": "crm_afspraak_id",
+        "table": "afspraak_betreft_account"
+      },
+      {
+        "foreign_key": "crm_afspraak_id",
+        "table": "afspraak_betreft_contact"
+      }
+    ]
+  },
+  {
+    "table": "campagne",
+    "primary_key": "crm_campagne_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "campagne_id",
+        "table": "cdi_pageview"
+      },
+      {
+        "foreign_key": "crm_campagne_id",
+        "table": "cdi_visit"
+      },
+      {
+        "foreign_key": "crm_campagne_id",
+        "table": "sessie"
+      },
+      {
+        "foreign_key": "crm_campagne_id",
+        "table": "inschrijving"
+      }
+    ]
+  },
+  {
+    "table": "cdi_visit",
+    "primary_key": "crm_cdi_visit_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "visit_id",
+        "table": "cdi_pageview"
+      }
+    ]
+  },
+  {
+    "table": "cdi_web_content",
+    "primary_key": "crm_cdi_webcontent_web_content",
+    "foreign_keys": [
+      {
+        "foreign_key": "web_content",
+        "table": "cdi_pageview"
+      }
+    ]
+  },
+  {
+    "table": "cdi_mailing",
+    "primary_key": "crm_cdi_mailing_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "crm_cdi_mailing_id",
+        "table": "cdi_sentemail_kliks"
+      }
+    ]
+  },
+  {
+    "table": "persoon",
+    "primary_key": "crm_persoon_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "crm_persoon_id",
+        "table": "cdi_sentemail_kliks"
+      },
+      {
+        "foreign_key": "crm_persoon_id",
+        "table": "cdi_visit"
+      },
+      {
+        "foreign_key": "crm_persoon_id",
+        "table": "contact"
+      }
+    ]
+  },
+  {
+    "table": "functie",
+    "primary_key": "crm_functie_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "crm_functie_id",
+        "table": "contactfunctie"
+      }
+    ]
+  },
+  {
+    "table": "gebruikers",
+    "primary_key": "crm_gebruikers_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "crm_gebruikers_id",
+        "table": "info_en_klachten"
+      }
+    ]
+  },
+  {
+    "table": "inschrijving",
+    "primary_key": "crm_inschrijving_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "crm_inschrijving_id",
+        "table": "sessie_inschrijving"
+      }
+    ]
+  },
+  {
+    "table": "sessie",
+    "primary_key": "crm_sessie_id",
+    "foreign_keys": [
+      {
+        "foreign_key": "crm_sessie_id",
+        "table": "sessie_inschrijving"
+      }
+    ]
+  }
+]

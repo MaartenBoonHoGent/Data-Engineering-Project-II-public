@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toekomstige Contacten</title>
+  <link rel="icon" href="./images/logo_color.png" type="image/png">
+  <link rel="stylesheet" href="css/future-contacts.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html"><img src="./images/logo_white.png"></a></li>
+        <li><a href="add-data.html">Data Toevoegen</a></li>
+        <li><a href="future-campaigns.html">Toekomstige Campagnes</a></li>
+        <li><a href="lookalikes.html">Lookalikes</a></li>
+        <li><a href="future-contacts.html">Toekomstige Contacten</a></li>
+        <!-- <li><a href="public-data.html">Publieke Data</a></li> -->
+        <li><a href="personalized-mail.html">Gepersonaliseerde Mail</a></li>
+        <!-- <li><a href="membership.html">Lidmaatschap</a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="epic">
+      <h1>Genereer mogelijke contacten voor een toekomstige campagne</h1>
+      <p>
+        Geef hieronder een campagnes (ID) mee om toekomstige contacten te genereren. <br>
+        Het is ook mogelijk om een minimum waarschijnlijkheid mee te geven indien gewenst (default = 75%).
+      </p>
+    </div>
+
+    <div class="input_container">
+      <form action="" method="post">
+        <label for="campaign_id">Campagne ID<span style="color: red;">*</span></label> <br>
+        <input type="text" id="campaign_id" name="campaign_id" placeholder="Campagne ID" required style="width: 400px;"> <br><br>
+
+        <label for="percentage">Minimum waarschijnlijkheid</label> <br>
+        <input type="number" id="percentage" name="percentage" min="0" max="100" value="75"> % <br><br>
+
+        <input type="submit" value="Zoek contacten">
+      </form>
+    </div>
+
+    <!-- TODO Pas hier dan de href aan naar de locatie waar de csv zal staan -->
+    <a href="../src/epic 4/data/data_scaled.csv" id="csvdownload" onclick="downloadCSV()">Exporteer als CSV</a>
+
+    <div class="table_container">
+      <table>
+        <thead>
+          <tr>
+            <th>Campagne ID</th>
+            <th>Contact ID</th>
+            <th>Probabiliteit</th>
+            <th>Multiplier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- voorbeeldrijen -->
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>0.75</td>
+            <td>1.5</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>3</td>
+            <td>0.65</td>
+            <td>1.3</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>4</td>
+            <td>0.6</td>
+            <td>1.2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>5</td>
+            <td>0.55</td>
+            <td>1.1</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>6</td>
+            <td>0.5</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>7</td>
+            <td>0.45</td>
+            <td>0.9</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>8</td>
+            <td>0.4</td>
+            <td>0.8</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>9</td>
+            <td>0.35</td>
+            <td>0.7</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>10</td>
+            <td>0.3</td>
+            <td>0.6</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>11</td>
+            <td>0.25</td>
+            <td>0.5</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>12</td>
+            <td>0.2</td>
+            <td>0.4</td>
+          </tr>
+        </tbody>
+      </table>
+  </main>
+
+  <footer>
+
+  </footer>
+
+  
+  <script>
+    function downloadCSV() {
+      let contactid = document.getElementById("contact_id").value;
+      let filename = "campagnes_" + contactid + ".csv";
+
+      document.getElementById("csvdownload").setAttribute("download", filename);
+
+      console.log("downloading csv file ...");
+    }
+  </script>
+</body>
+</html>
